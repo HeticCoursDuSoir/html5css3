@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js - The HTML Presentation Framework</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>HTML5 & CSS3</h1>
+					<h3>LEs bonnes pratiques</h3>
+					<p>
+						<small>By <a href="http://labs.hetic.net">HeticLabs</a> / <a href="http://twitter.com/ArnaudMolo">@hakimel</a> & <a href="http://twitter.com/LaRosaKevin">Kévin La Rosa</a></small>
+					</p>
+				</section>
+
+				<section><h2>Sommaire</h2>
+                    <div>
+                        <ol>
+                            <li>Pourquoi faire du HTML5 CSS3</li>
+                            <li>Historique&nbsp;</li>
+                            <li>Balises HTML5</li>
+                            <li>Selecteurs CSS3</li>
+                            <li>Propriétés basiques</li>
+                            <li>Différents types d'éléments</li>
+                            <li>Margin / Padding</li>
+                            <li>Fixe / Relative / Absolute</li>
+                            <li>Grids systèms</li>
+                        </ol>
+                    </div>
+				</section>
+
+				<!-- Example of nested vertical slides -->
+				<section>
+                    <section>
+                        <h1>Pourquoi ?</h1>
+                    </section>
+					<section>
+						<h2>Définition du HTML5</h2>
+						<ol>
+                            <li><span>Meilleur balisage sémantique</span></li>
+                            <li><span>Ajout de médias riches</span></li>
+                            <li><span>Plein d'API magiques</span>
+                                <ul>
+                                    <li><span>Canvas</span></li>
+                                    <li><span>Géolocalisation</span></li>
+                                    <li><span>LocalStorage</span></li>
+                                </ul>
+                            </li>
+                        </ol>
+					</section>
+					<section>
+						<h2>Gmail</h2>
+						<a href="http://www.gmail.com" target="_blank" ><img src="http://i.imgur.com/5mlzj82.png" alt="Gmail"></a>
+					</section>
+					<section>
+						<h2>Smash Mag</h2>
+                        <a href="http://www.smashingmagazine.com/" target="_blank"><img src="http://i.imgur.com/YdTRL79.png" alt="Smash"></a>
+					</section>
+				</section>
+
+				<section>
+                    <section>
+                        <h2>Historique</h2>
+                        <h3>Inventé par Tim Berners-Lee</h3>
+                        <img src="http://upload.wikimedia.org/wikipedia/commons/3/3a/Tim_Berners-Lee_closeup.jpg" alt="Tim Berners-Lee" height="300" >
+                    </section>
+                    <section>
+                        <ul>
+                            <li><span>1990 : HTML</span></li>
+                            <li><span>1993 : IMG</span></li>
+                            <li><span>1994 : Création du W3C</span></li>
+                            <li><span>1996 : Création du CSS</span></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <img src="http://4.bp.blogspot.com/-SWgpRHRWXz0/T0zKVJNXKjI/AAAAAAAAB1Q/Qc18sUW8Ilg/s1600/do+i+look+like+i+give+a+fuck.jpg" alt="Like i give a f*ck" width="500">
+                    </section>
+                    <section>
+                        <h2>Pendant ce temps là, personne ne suis</h2>
+                        <p>Aucun standart de respecté par les navigateurs ( IE / Netscape / Mosaic )</p>
+                        <p>Flash : du son et des images qui bougent !</p>
+                    </section>
+                    <section>
+                        <h2>Holly Savior !</h2>
+                        <img src="http://s2.favim.com/orig/33/cute-firefox-fluffy-playing-red-panda-Favim.com-265507.jpg" alt="Firefox">
+                    </section>
+                    <section>
+                        <ul>
+                            <li><span>2002 : Mozilla reprend Netscape et crée Firefox en suivant le W3C</span></li>
+                            <li><span>2004 : Division du W3C</span></li>
+                            <li><span>2007 : Début du développement d'HTML5 soutnus par les big boss d'internet (Opéra, Apple, Mozilla, Google)</span></li>
+                            <li><span>2012 : Passage en Candidate Recommandation</span></li>
+                        </ul>
+                    </section>
+				</section>
+
+				<section>
+                    <section>
+    					<h2>Balises HTML5</h2>
+    					<p>
+                            <ul>
+                                <li><span>section</span></li>
+                                <li><span>article</span></li>
+                                <li><span>nav</span></li>
+                                <li><span>...</span></li>
+                            </ul>
+    					</p>
+                    </section>
+                    <section>
+                        <h2>Pour une meilleur sémantique</h2>
+                        <p>Accessiblilitées pour d'autres lecteurs que les écrans</p>
+                        <p>Pour mieu se retrouver</p>
+                        <p>Ca fait plaisir aux moteurs de recherche</p>
+                    </section>
+                    <section>
+                        <h2>Micro-data</h2>
+                        <p>Itemscope / itemtype</p>
+                    </section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Selecteurs et Poids CSS</h2>
+						<p>Un sélecteur css permet de cibler une balise ou des balises de l'arbre d'une ma page html dans le but de modifier son apparence graphique.</p>
+					</section>
+					<section>
+						<p>Un style se défini autour dans une page CSS dédiée ou entre les balises</p>
+						<pre><code>&lt;style&gt; &lt;/style&gt;</code></pre>
+					</section>
+					<section>
+						<pre><code>*{
+    margin:0;
+    padding:0;
+}</code></pre>
+                    <p>Selectionne tout les éléments de ma page, pratique pour mettre à zéro les marges de tout les éléments.</p>
+					</section>
+                    <section>
+                        <h2>#mon-id</h2>
+                        <pre><code>#monid{
+    width:200px;
+    height:200px;
+}</code></pre>
+                        <p>il cible un élément par son identifiant. L'identifiant doit être unique. Plusieurs éléments d'une même page ne peuvent pas avoir le même identifiant.</p>
+                    </section>
+                    <section>
+                        <h2>.ma-classe</h2>
+                        <pre><code>#error{
+    color:red;
+}</code></pre>
+                        <p>Cible un élément par sa classe, elles peuvent cibler plusieurs éléments.</p>
+                    </section>
+                    <section>
+                        <h2>Sélecteur de type</h2>
+                        <pre><code>a{
+    color:red;
+}</code></pre>
+                        <p>cible un élement par son type.</p>
+                    </section>
+                    <section>
+                        <h2>x:hover pseudo-classe</h2>
+                        <pre><code>a:hover { color: blue; }
+
+a:visited { color: red; }
+
+a:link { color: green; }
+</code></pre>
+                    </section>
+                    <section>
+                        <h2>x + y sélecteur adjacent</h2>
+                        <pre><code>div + p{
+    color:red;
+}</code></pre>
+                        <p>Le sélecteur adjacent correspond à tout élément Y qui sont a coté d'un élément X.</p>
+                    </section>
+                    <section>
+                        <h2>x > y sélecteur parent direct</h2>
+                        <pre><code>article + ul{
+    background-color:red;
+}</code></pre>
+<pre><code>&lt;div id="article"&gt;
+    &lt;ul&gt;
+        &lt;li&gt; element 1&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+                        <p>Le sélecteur adjacent correspond à tout élément Y qui sont a coté d'un élément X.</p>
+                    </section>
+                    <section>
+                        <h2>X:first-child // X:last-child</h2>
+                        <pre><code>ul li:first-child{
+    color:pink;
+}</code></pre>
+                        <p>Cible le premier enfant de l'élément parent.</p>
+                    </section>
+                    <section>
+                        <h3>X:NTH-OF-TYPE</h3>
+                        <pre><code>ul li:nth-of-type(x) {
+    font-size:10px;
+}
+                        </code></pre>
+                        <p>sélectionne le Xem enfant de l'élément parent.</p>
+                    </section>
+                    <section>
+                        <h2>Les poids CSS</h2>
+                        <ul>
+                            <li><span>Le poid d'un élément (une balise) type <code>body</code>, <code>section</code>, <code>article</code> est de <strong>1</strong>.</span></li>
+                            <li><span>Le poids d'une classe est de <strong>10</strong>.</span></li>
+                            <li><span>Le poid d'un ID est de <strong>1000</strong></span>.</li>
+                            <li><span>Le poid d'un attribut de style est de <strong>1000</strong>.</span></li>
+                        </ul>
+                        <pre><code>div {color:green;}  
+.maDiv {color:blue;}
+.maDiv {color:red;}</code></pre>
+                        <p>Le texte sera rouge.</p>
+                        <pre><code>div {background-color:blue;}  
+div.maDiv {background-color:red;}  
+.maDiv {background-color:yellow;}</code></pre>
+                        <p>Le texte sera rouge</p>
+                        <pre><code>&lt;div id="maDiv" style="background-color:green"&gt; &lt;/div&gt;</code></pre>
+                        <p>Le texte sera vert !</p>
+                    </section>
+				</section>
+
+				<section>
+                    <section>
+                        <h2>Le positionnement</h2>
+                        <img src="http://i.imgur.com/I1xk2FU.png" alt="positionnement">
+                    </section>
+                    <section>
+                        <h2>Margin</h2>                       
+<pre><code>margin-top : 0;
+margin-right : 2em;
+margin-bottom : 10px;
+margin-left : 5%;
+</code></pre>
+                            <pre><code>margin : (top/right/bottom/left);</code></pre>
+                            <code>ex: margin : 25px;</code>
+                            <pre><code>margin : (top/bottom) (right/left);</code></pre>
+                            <code>ex: margin : 10px 25px;</code>
+                            <pre><code>margin : (top) (right/left) (bottom);</code></pre>
+                            <code>ex: margin : 25px 50px 100px;</code>
+                            <pre><code>margin : (top) (right) (bottom) (left);</code></pre>
+                            <code>ex: margin : 10px 25px 5px 15px;</code>
+                            <pre><code>marging:0 auto;</code></pre>
+                        <p>Le navigateur calcule le margin (right/left) automatiquement.</p>
+                    </section>
+                </section>
+
+				<section>
+					<section>
+						<h3>Le cas Internet explorer ♥</h3>
+						<p>
+							<img src="http://static.commentcamarche.net/www.commentcamarche.net/faq/images/2237-internetexplorer-s-.png"/>
+							<img src="http://community.secondlife.com/t5/image/serverpage/image-id/80683i64F442F2EB4F7361/image-size/large/is-moderation-mode/true?v=mpbl-1&px=600"/>
+						</p>
+					</section>
+					<section>
+						<h1>Solution ?</h1>
+					</section>
+					<section>
+						<img src="http://www.geekologie.com/2010/03/31/explorer-voodoo.jpg"/>
+					</section>
+					<section>
+						<h1>Les SHIV ou SHIM</h1>
+						<h3>Permetre au navigateur obsolète d'interpréter les balises HTML5</h3>
+					</section>
+					<section>
+						<h2>Html5 shiv</h2>
+    						<pre>
+    							<code>&lt;!--[if lt IE 9]&gt;&lt;script src=&quot;dist/html5shiv.js&quot;&gt;&lt;/script&gt;&lt;![endif]--&gt;
+&lt;!--[if IE 5.0]&gt;&lt;script src=&quot;dist/html5shiv.js&quot;&gt;&lt;/script&gt;&lt;![endif]--&gt;
+&lt;!--[if IE]&gt;&lt;script src=&quot;dist/html5shiv.js&quot;&gt;&lt;/script&gt;&lt;![endif]--&gt;
+
+   							 </code>
+   							</pre>
+   							<a href="https://code.google.com/p/html5shiv/">https://code.google.com/p/html5shiv/</a>
+					</section>
+					<section>
+						<h2>Détecteur de compatibilité HTML 5</h2>
+    						<pre>
+    							<code>
+									 if (Modernizr.geolocation){
+									  // La géolocalisation est supportée 
+									}
+									else {
+									  // La géolocalisation n’est pas supportée
+									}   								
+   								</code>
+   							</pre>						
+						<a href="http://modernizr.com/">http://modernizr.com/</a>
+					</section>
+					<section>
+						<h2>Les solutions tout en un </h2>
+						<img src="http://www.crazyxhtml.com/blog/wp-content/uploads/2012/12/html-boiler-plate.png"/>
+						<img src="http://www.crazyxhtml.com/blog/wp-content/uploads/2012/12/html-boiler-plate-2.png"/>
+    					
+						<a href="http://html5boilerplate.com/">http://html5boilerplate.com/</a>
+					</section>					
+					<section>
+						<h2>Les solutions tout en un </h2>
+						<img width="960px" height="500px" src="http://3.bp.blogspot.com/-ObaMmEV9jmY/UFmM1IawoWI/AAAAAAAAAHo/rIx7Cqk8yJw/s1116/v0-0-3_initiliazr.png"/>
+    					
+						<a href="http://www.initializr.com/">http://www.initializr.com/</a>
+					</section>
+					<section>
+						<h2>Les solutions tout en un </h2>
+						<img width="960px" height="500px" src="http://asciicasts.com/system/photos/1023/original/E328I01.png"/>
+    					
+						<a href="http://twitter.github.com/bootstrap/">http://twitter.github.com/bootstrap/h</a>
+					</section>							
+				</section>
+				<section>
+					<section>
+						<h1>Propriétées CSS 3</h1>
+						<img src="http://ayouberitouni.com/wp-content/uploads/2012/12/css3.jpg">
+					</section>
+					<section>
+						<h2> Box Shadow</h2>
+						<pre><code>box-shadow: h-pos v-pos (blur) (spread) (color) (inset);</code></pre>
+						<pre><code>-moz-box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7);
+-webkit-box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7);
+box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7);</code></pre>
+						<img src="http://red-team-design.developpez.com/tutoriels/css/creer-effets-etonnants-avec-propriete-css3-box-shadow/images/box-shadow-drop.png"/><br/>
+						<span>Gestion des ombres portées</span>
+					</section>
+					<section>
+						<h2>Radius</h2>
+						<pre><code>border-radius: hg hd bg bd;</code></pre>
+						<pre><code>border-radius: 5px 10px 0 5px;</code></pre>
+						<img src="http://www.webtutoriaux.com/stocks/images/Webtutoriaux-Mathieusub-ghjlmpx029-border_radius.PNG"/><br/>
+						<span>Angle arrondi</span>						
+					</section>
+					<section>
+						<h2>Gestion de l'opacité</h2>
+						<pre><code>background-color: rgba(0, 0, 215, 0.6);</code></pre>
+					</section>
+					<section>
+						<h2>transition</h2>
+						<pre><code>div { background-color:pink;}
+
+div:hover{
+    background-color:red;
+    -webkit-transition: background-color 1000ms linear;
+    -moz-transition: background-color 1000ms linear;
+    -o-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;
+}
+						</code></pre>
+						<a href="https://developer.mozilla.org/en-US/docs/CSS/Tutorials/Using_CSS_transitions">Mozilla CSS transitions</a>
+					</section>												
+				</section>
+
+
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
