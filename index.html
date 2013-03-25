@@ -38,9 +38,9 @@
 			<div class="slides">
 				<section>
 					<h1>HTML5 & CSS3</h1>
-					<h3>LEs bonnes pratiques</h3>
+					<h3>Les fondamentaux</h3>
 					<p>
-						<small>By <a href="http://labs.hetic.net">HeticLabs</a> / <a href="http://twitter.com/ArnaudMolo">@hakimel</a> & <a href="http://twitter.com/LaRosaKevin">Kévin La Rosa</a></small>
+						<small>By <a href="http://labs.hetic.net">HeticLabs</a> : <a href="http://twitter.com/ArnaudMolo">@hakimel</a>, <a href="http://twitter.com/LaRosaKevin">@Kévin La Rosa</a>,<a href="http://twitter.com/mathieudutto">@Mathieu Dutto</a>,<a href="http://twitter.com/tom_forlini">@Tom Forlini</a> & <a href="http://twitter.com/mathieudutto">@Loic Saint-Roch</a></small>
 					</p>
 				</section>
 
@@ -146,7 +146,31 @@
                     <section>
                         <h2>Micro-data</h2>
                         <p>Itemscope / itemtype</p>
+                        <pre><code>
+&lt;div itemscope itemtype=&quot;http://schema.org/Product&quot; itemid=&quot;urn:isbn:978-2-212-12826-0&quot;&gt;
+&lt;h1 itemprop=&quot;name&quot;&gt;CSS avancées&lt;/h1&gt;
+&lt;/div&gt;                                
+                        </code></pre>
+                        <a>http://schema.org/Thing</a> || 
+                        <a>http://n.whatwg.org/work</a>
                     </section>
+                     <section>Balise CANVAS</h2>
+                         <pre><code>&lt;canvas id=&quot;exemple&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;
+  Navigateur non comptabible
+&lt;/canvas&gt;                        		
+                         </code></pre>
+                         <pre><code>
+  var exemple = document.getElementById('exemple');
+  var contexte = exemple.getContext('2d');
+  contexte.fillStyle = "rgba(0,0,255,0.5)";
+  contexte.fillRect(30, 30, 50, 50);
+                     </code></pre>
+                     <a href="http://raphaeljs.com/">Raphael Js : Graphisme 2D</a> ||
+                     <a href="http://paperjs.org/">Paper.js : Graphisme 2D</a>
+                     <a href="http://mrdoob.github.com/three.js/">Three.js : WEBGL</a><br/>
+                     <a href="http://ro.me">Ro.me : expérience</a>||
+                     <a href="http://hexgl.bkcore.com/">HexGL : Wipeout</a>
+                    </section>                   
 				</section>
 
 				<section>
@@ -481,7 +505,17 @@ div:hover{
 						<h2>Boostrap : Mathieu dutto expert</h2>
 						<img src="http://asciicasts.com/system/photos/1023/original/E328I01.png"/><BR/>
 						<span>12 FIXE OU FLUID</span>
-					</section>																	
+					</section>
+					<section>
+						<h2>1140 grid</h2>
+						<img src="http://bloggingwordpress.net/wp-content/uploads/2012/11/1140-Grid-Framework-CSS.jpg"/><BR/>
+						<span>12 FIXE OU FLUID</span>
+					</section>
+					<section>
+						<h2>Fondation</h2>
+						<img src="http://www.developpez.com/public/images/news/foundation2.png"/><BR/>
+						<span>12 FLUID // Mobile grid</span>
+					</section>																											
 				</section>
 
 
