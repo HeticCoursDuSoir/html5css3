@@ -55,7 +55,7 @@
                             <li>Différents types d'éléments</li>
                             <li>Margin / Padding</li>
                             <li>Fixe / Relative / Absolute</li>
-                            <li>Grids systèms</li>
+                            <li>Grid system</li>
                         </ol>
                     </div>
 				</section>
@@ -107,19 +107,19 @@
                         <img src="http://4.bp.blogspot.com/-SWgpRHRWXz0/T0zKVJNXKjI/AAAAAAAAB1Q/Qc18sUW8Ilg/s1600/do+i+look+like+i+give+a+fuck.jpg" alt="Like i give a f*ck" width="500">
                     </section>
                     <section>
-                        <h2>Pendant ce temps là, personne ne suis</h2>
-                        <p>Aucun standart de respecté par les navigateurs ( IE / Netscape / Mosaic )</p>
+                        <h2>Pendant ce temps là, personne ne suit</h2>
+                        <p>Aucun standard de respecté par les navigateurs ( IE / Netscape / Mosaic )</p>
                         <p>Flash : du son et des images qui bougent !</p>
                     </section>
                     <section>
-                        <h2>Holly Savior !</h2>
+                        <h2>Holy Savior !</h2>
                         <img src="http://s2.favim.com/orig/33/cute-firefox-fluffy-playing-red-panda-Favim.com-265507.jpg" alt="Firefox">
                     </section>
                     <section>
                         <ul>
                             <li><span>2002 : Mozilla reprend Netscape et crée Firefox en suivant le W3C</span></li>
                             <li><span>2004 : Division du W3C</span></li>
-                            <li><span>2007 : Début du développement d'HTML5 soutnus par les big boss d'internet (Opéra, Apple, Mozilla, Google)</span></li>
+                            <li><span>2007 : Début du développement d'HTML5 soutenu par les big boss d'Internet (Opéra, Apple, Mozilla, Google)</span></li>
                             <li><span>2012 : Passage en Candidate Recommandation</span></li>
                         </ul>
                     </section>
@@ -138,24 +138,24 @@
     					</p>
                     </section>
                     <section>
-                        <h2>Pour une meilleur sémantique</h2>
-                        <p>Accessiblilitées pour d'autres lecteurs que les écrans</p>
-                        <p>Pour mieu se retrouver</p>
-                        <p>Ca fait plaisir aux moteurs de recherche</p>
+                        <h2>Pour une meilleure sémantique</h2>
+                        <p>Accessibilités pour d'autres lecteurs que les écrans</p>
+                        <p>Pour mieux se retrouver</p>
+                        <p>Ça fait plaisir aux moteurs de recherche</p>
                     </section>
                     <section>
                         <h2>Micro-data</h2>
-                        <p>Itemscope / itemtype</p>
+                        <p>itemscope / itemtype</p>
                     </section>
 				</section>
 
 				<section>
 					<section>
 						<h2>Selecteurs et Poids CSS</h2>
-						<p>Un sélecteur css permet de cibler une balise ou des balises de l'arbre d'une ma page html dans le but de modifier son apparence graphique.</p>
+						<p>Un sélecteur CSS permet de cibler une balise ou des balises de l'arbre d'une page html dans le but de modifier son apparence graphique.</p>
 					</section>
 					<section>
-						<p>Un style se défini autour dans une page CSS dédiée ou entre les balises</p>
+						<p>Un style se définit dans une page CSS dédiée (à part) ou entre les balises</p>
 						<pre><code>&lt;style&gt; &lt;/style&gt;</code></pre>
 					</section>
 					<section>
@@ -163,7 +163,7 @@
     margin:0;
     padding:0;
 }</code></pre>
-                    <p>Selectionne tout les éléments de ma page, pratique pour mettre à zéro les marges de tout les éléments.</p>
+                    <p>Sélectionne tous les éléments de ma page, pratique pour mettre à zéro les marges de tout les éléments.</p>
 					</section>
                     <section>
                         <h2>#mon-id</h2>
@@ -171,11 +171,11 @@
     width:200px;
     height:200px;
 }</code></pre>
-                        <p>il cible un élément par son identifiant. L'identifiant doit être unique. Plusieurs éléments d'une même page ne peuvent pas avoir le même identifiant.</p>
+                        <p>Cible un élément par son identifiant. L'identifiant doit être unique. Plusieurs éléments d'une même page ne peuvent pas avoir le même identifiant.</p>
                     </section>
                     <section>
                         <h2>.ma-classe</h2>
-                        <pre><code>#error{
+                        <pre><code>.error{
     color:red;
 }</code></pre>
                         <p>Cible un élément par sa classe, elles peuvent cibler plusieurs éléments.</p>
@@ -185,10 +185,10 @@
                         <pre><code>a{
     color:red;
 }</code></pre>
-                        <p>cible un élement par son type.</p>
+                        <p>Cible un élement par son type.</p>
                     </section>
                     <section>
-                        <h2>x:hover pseudo-classe</h2>
+                        <h2>something:hover pseudo-class</h2>
                         <pre><code>a:hover { color: blue; }
 
 a:visited { color: red; }
@@ -201,43 +201,49 @@ a:link { color: green; }
                         <pre><code>div + p{
     color:red;
 }</code></pre>
-                        <p>Le sélecteur adjacent correspond à tout élément Y qui sont a coté d'un élément X.</p>
+                        <p>Le sélecteur adjacent correspond à tout élément Y qui est après / à droite d'un élément X.</p>
                     </section>
                     <section>
-                        <h2>x > y sélecteur parent direct</h2>
-                        <pre><code>article + ul{
+                        <h2>X > Y sélecteur enfant direct</h2>
+                        <pre><code>article > ul{
     background-color:red;
 }</code></pre>
 <pre><code>&lt;div id="article"&gt;
-    &lt;ul&gt;
+    &lt;ul&gt; Sélectionné
+        &lt;li&gt; element 1&lt;/li&gt;
+        &lt;ul&gt; Ignoré
+            &lt;li&gt; element 1&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/ul&gt;
+    &lt;ul&gt; Sélectionné
         &lt;li&gt; element 1&lt;/li&gt;
     &lt;/ul&gt;
 &lt;/div&gt;
 </code></pre>
-                        <p>Le sélecteur adjacent correspond à tout élément Y qui sont a coté d'un élément X.</p>
+                        <p>Le sélecteur d'enfants directs correspond à tout élément Y qui est directement dans un élément X.</p>
                     </section>
                     <section>
-                        <h2>X:first-child // X:last-child</h2>
+                        <h2>something:first-child // something:last-child</h2>
                         <pre><code>ul li:first-child{
     color:pink;
 }</code></pre>
                         <p>Cible le premier enfant de l'élément parent.</p>
                     </section>
                     <section>
-                        <h3>X:NTH-OF-TYPE</h3>
-                        <pre><code>ul li:nth-of-type(x) {
+                        <h3>something:NTH-OF-TYPE(X)</h3>
+                        <pre><code>ul > li:nth-of-type(x) {
     font-size:10px;
 }
                         </code></pre>
-                        <p>sélectionne le Xem enfant de l'élément parent.</p>
+                        <p>Sélectionne le Xème enfant (li) de l'élément parent (ul).</p>
                     </section>
                     <section>
                         <h2>Les poids CSS</h2>
                         <ul>
-                            <li><span>Le poid d'un élément (une balise) type <code>body</code>, <code>section</code>, <code>article</code> est de <strong>1</strong>.</span></li>
+                            <li><span>Le poids d'un élément (une balise) type <code>body</code>, <code>section</code>, <code>article</code> est de <strong>1</strong>.</span></li>
                             <li><span>Le poids d'une classe est de <strong>10</strong>.</span></li>
-                            <li><span>Le poid d'un ID est de <strong>1000</strong></span>.</li>
-                            <li><span>Le poid d'un attribut de style est de <strong>1000</strong>.</span></li>
+                            <li><span>Le poids d'un ID est de <strong>1000</strong></span>.</li>
+                            <li><span>Le poids d'un attribut de style est de <strong>1000</strong>.</span></li>
                         </ul>
                         <pre><code>div {color:green;}  
 .maDiv {color:blue;}
@@ -325,7 +331,7 @@ padding-left: 20%;
 
 				<section>
 					<section>
-						<h3>Le cas Internet explorer ♥</h3>
+						<h3>Le cas Internet Explorer ♥</h3>
 						<p>
 							<img src="http://static.commentcamarche.net/www.commentcamarche.net/faq/images/2237-internetexplorer-s-.png"/>
 							<img src="http://community.secondlife.com/t5/image/serverpage/image-id/80683i64F442F2EB4F7361/image-size/large/is-moderation-mode/true?v=mpbl-1&px=600"/>
@@ -339,7 +345,7 @@ padding-left: 20%;
 					</section>
 					<section>
 						<h1>Les SHIV ou SHIM</h1>
-						<h3>Permetre au navigateur obsolète d'interpréter les balises HTML5</h3>
+						<h3>Permettre au navigateur obsolète d'interpréter les balises HTML5</h3>
 					</section>
 					<section>
 						<h2>Html5 shiv</h2>
@@ -367,20 +373,20 @@ padding-left: 20%;
 						<a href="http://modernizr.com/">http://modernizr.com/</a>
 					</section>
 					<section>
-						<h2>Les solutions tout en un </h2>
+						<h2>Les solutions tout-en-un </h2>
 						<img src="http://www.crazyxhtml.com/blog/wp-content/uploads/2012/12/html-boiler-plate.png"/>
 						<img src="http://www.crazyxhtml.com/blog/wp-content/uploads/2012/12/html-boiler-plate-2.png"/>
     					
 						<a href="http://html5boilerplate.com/">http://html5boilerplate.com/</a>
 					</section>					
 					<section>
-						<h2>Les solutions tout en un </h2>
+						<h2>Les solutions tout-en-un </h2>
 						<img width="960px" height="500px" src="http://3.bp.blogspot.com/-ObaMmEV9jmY/UFmM1IawoWI/AAAAAAAAAHo/rIx7Cqk8yJw/s1116/v0-0-3_initiliazr.png"/>
     					
 						<a href="http://www.initializr.com/">http://www.initializr.com/</a>
 					</section>
 					<section>
-						<h2>Les solutions tout en un </h2>
+						<h2>Les solutions tout-en-un </h2>
 						<img width="960px" height="500px" src="http://asciicasts.com/system/photos/1023/original/E328I01.png"/>
     					
 						<a href="http://twitter.github.com/bootstrap/">http://twitter.github.com/bootstrap/h</a>
@@ -388,7 +394,7 @@ padding-left: 20%;
 				</section>
 				<section>
 					<section>
-						<h1>Propriétées CSS 3</h1>
+						<h1>Propriétés CSS3</h1>
 						<img src="http://ayouberitouni.com/wp-content/uploads/2012/12/css3.jpg">
 					</section>
 					<section>
@@ -412,7 +418,7 @@ box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7);</code></pre>
 						<pre><code>background-color: rgba(0, 0, 215, 0.6);</code></pre>
 					</section>
 					<section>
-						<h2>transition</h2>
+						<h2>Transition</h2>
 						<pre><code>div { background-color:pink;}
 
 div:hover{
@@ -431,12 +437,11 @@ div:hover{
 
 
 		</div>
-
+        
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.min.js"></script>
 
 		<script>
-
 			// Full list of configuration options available here:
 			// https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
@@ -460,8 +465,8 @@ div:hover{
 					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
 				]
 			});
-
+        
 		</script>
-
+        
 	</body>
 </html>
